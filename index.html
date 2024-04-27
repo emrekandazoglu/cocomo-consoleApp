@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Total Calculator</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">Parameter</th>
+						<th scope="col">User Input</th>
+						<th scope="col">Yalın</th>
+						<th scope="col">Orta</th>
+						<th scope="col">Karışık</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Kullanıcı Giriş Sayısı</th>
+						<td>
+							<input
+								type="text"
+								class="user-input"
+								id="kgs"
+								placeholder="sayı"
+							/>
+						</td>
+						<td>
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="check1"
+								name="kgs_option"
+								value="3"
+							/>
+							<label class="form-check-label">3</label>
+						</td>
+						<td>
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="check2"
+								name="kgs_option"
+								value="4"
+							/>
+							<label class="form-check-label">4</label>
+						</td>
+						<td>
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="check3"
+								name="kgs_option"
+								value="6"
+							/>
+							<label class="form-check-label">6</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Dışsal Arayüz Sayısı</th>
+						<td>
+							<input
+								type="text"
+								class="user-input"
+								id="das"
+								placeholder="sayı"
+							/>
+						</td>
+						<td>
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="check10"
+								name="das_option"
+								value="5"
+							/>
+							<label class="form-check-label">5</label>
+						</td>
+						<td>
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="check11"
+								name="das_option"
+								value="7"
+							/>
+							<label class="form-check-label">7</label>
+						</td>
+						<td>
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="check12"
+								name="das_option"
+								value="10"
+							/>
+							<label class="form-check-label">10</label>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="d-grid mt-3">
+				<button
+					type="button"
+					class="btn btn-primary btn-block"
+					id="calculate-button"
+				>
+					Hesapla (Hesapla)
+				</button>
+			</div>
+			<p id="total-result"></p>
+
+			<table>
+				<tr>
+					<th>Soru</th>
+					<th>Puan</th>
+					<th>Cevap</th>
+				</tr>
+				<tr>
+					<td>Uygulama, güvenilir yedekleme ve kurtarma gerektiriyor mu?</td>
+					<td></td>
+					<td><input type="number" id="q1" min="0" max="5" value="0" /></td>
+				</tr>
+				<tr>
+					<td>Veri iletişimi gerektiriyor mu?</td>
+					<td></td>
+					<td><input type="number" id="q2" min="0" max="5" value="0" /></td>
+				</tr>
+				<tr>
+					<td>Dağıtılmış İşlemler var mı?</td>
+					<td></td>
+					<td><input type="number" id="q3" min="0" max="5" value="0" /></td>
+				</tr>
+
+				<tr>
+					<td>Toplam TCF</td>
+					<td></td>
+					<td><span id="total-tcf">0</span></td>
+				</tr>
+			</table>
+
+			<form id="language-form">
+				<div class="mb-3">
+					<label for="language-select" class="form-label"
+						>Programlama Dili</label
+					>
+					<select class="form-select" id="language-select">
+						<option value="Assembly">Assembly</option>
+						<option value="Cobol">Cobol</option>
+						<option value="Fortran">Fortran</option>
+						<option value="Pascal">Pascal</option>
+						<option value="C">C</option>
+						<option value="Ada">Ada</option>
+						<option value="NesneKokenliDiller">Nesne Kökenli Diller</option>
+						<option value="4KusakDilleri">4. Kuşak Dilleri</option>
+						<option value="KodUreticiler">Kod Üreticiler</option>
+					</select>
+				</div>
+			</form>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+		<script src="index.js"></script>
+	</body>
+</html>
